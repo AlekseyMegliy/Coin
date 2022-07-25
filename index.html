@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="Stylesheet" href="style.css">
+    <title>The coin</title>
+</head>
+<body>
+    <input value = "Start" onclick="start()" type="button" id="start">
+    <input value = "Stop" onclick="stop()" type="button" id="stop">
+    <div>
+        <svg class="coin">
+
+            <g class="tails vis">
+                <circle cx="110" cy="110" r="100"/>
+                <rect  x="105" y="50" width="5" height="130" rx="1" ry="20" />
+            </g>
+
+            <g class="tails-half-heads half vis">
+                <ellipse cx="110" cy="110" rx="50" ry="100"/>
+                <rect  x="109" y="50" width="2" height="130" rx="1" ry="20" />
+            </g>
+
+            <g class="edge vis">
+                <rect  x="105" y="10" width="5" height="200"  />
+            </g>
+
+            <g class="half-heads-tails half vis">
+                <ellipse cx="110" cy="110" rx="50" ry="100"/>
+                <rect  x="86" y="70" width="1" height="60" rx="10"  />
+                <rect  x="106" y="70" width="2" height="80" rx="100%" />
+                <rect  x="126" y="70" width="3" height="60" rx="10"  />
+                <rect  x="86" y="130" width="43" height="5"/>
+            </g>
+
+            <g class="heads vis">
+                <circle cx="110" cy="110" r="100"/>
+                <rect  x="87" y="70" width="2" height="60" rx="10"  />
+                <rect  x="107" y="70" width="2" height="80" rx="100%" />
+                <rect  x="127" y="70" width="2" height="60" rx="10"  />
+                <rect  x="87" y="130" width="42" height="5"/>
+            </g>
+
+            <g class="heads-half-tails half vis">
+                <ellipse cx="110" cy="110" rx="50" ry="100"/>
+                <rect  x="89" y="70" width="3" height="60" rx="10"  />
+                <rect  x="109" y="70" width="2" height="80" rx="100%" />
+                <rect  x="129" y="70" width="1" height="60" rx="10"  />
+                <rect  x="89" y="130" width="41" height="5"/>
+            </g>
+
+            <g class="half-tails-heads half vis">
+                <ellipse cx="110" cy="110" rx="50" ry="100"/>
+                <rect  x="105" y="50" width="2" height="130" rx="1" ry="20" />
+            </g>
+
+        </svg>
+    </div>
+</body>
+
+</html><script src="heads_or_tails.js"></script>
