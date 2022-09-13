@@ -1,28 +1,32 @@
-let coin = document.querySelector('.coin');
-let tails = document.querySelector('.tails');
-let edge = document.querySelector('.edge');
-let heads = document.querySelector('.heads');
-let tailsHalfHeads = document.querySelector('.tails-half-heads');
-let halfHeadsTails = document.querySelector('.half-heads-tails');
-let headsHalfTails = document.querySelector('.heads-half-tails');
-let halfTailsHeads = document.querySelector('.half-tails-heads');
+
+let coin = document.querySelectorAll('g');
+let coins=[];
+for (let con of coin) {
+    coins.push(con);
+
+}
+let count=0;
+
+function spin() {
+    if(count == coins.length){
+        count = 0;
+    }
+    coins[count].style.display = 'inline-block'
+    count++
+}
+count =0;
+function spoon(){
+    if(count == coins.length){
+        count = 0;
+    }
+    coins[count].style.display = 'none'
+    count++
+}
 
 function start(){
-    // tails.classList.remove('vis');
-    // tailsHalfHeads.classList.remove('vis');
-    // edge.classList.remove('vis');
-    // halfHeadsTails.classList.remove('vis');
-    // heads.classList.remove('vis');
-    // headsHalfTails.classList.remove("vis");
-    // halfTailsHeads.classList.remove("vis");
+     setTimeout(setInterval(spoon, 3.5), 29);
+     setInterval(spin, 29);
 
 }
-function stop(){
-    tails.classList.add('vis');
-    tailsHalfHeads.classList.add('vis');
-    edge.classList.add('vis');
-    halfHeadsTails.classList.add('vis');
-    heads.classList.add('vis');
-    headsHalfTails.classList.add('vis');
-    halfTailsHeads.classList.remove("vis");
-}
+
+function stop(){}
